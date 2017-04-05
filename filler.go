@@ -32,7 +32,7 @@ func RegFiller(f Filler) {
 // Fill - fill the object with all the current fillers
 func Fill(obj interface{}) {
 	if reflect.TypeOf(obj).Kind() != reflect.Ptr {
-		log.Panic("panic at [yaronsumel/filler] : obj kind passed to Fill should be Ptr")
+		log.Panic("panic at [md5login/filler] : obj kind passed to Fill should be Ptr")
 	}
 	v := reflect.TypeOf(obj).Elem()
 	s := reflect.ValueOf(obj).Elem()
