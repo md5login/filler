@@ -20,14 +20,14 @@ var errDemoFiller = Filler{
 }
 
 type demoStruct struct {
-	Name    string `fill:"demoFiller1:Val"`
-	Val     string `fill:"demoFiller2"`
-	Ignore1 string `fill:"-"`
-	Ignore2 string `fill:""`
-	DefaultString 	string 	`defaults:"DefaultValue"`
-	DefaultInt 	int 	`defaults:"5"`
-	DefaultFloat64 	float64 `defaults:"42.6"`
-	DefaultBool 	bool	`defaults:"true"`
+	Name           string  `fill:"demoFiller1:Val"`
+	Val            string  `fill:"demoFiller2"`
+	Ignore1        string  `fill:"-"`
+	Ignore2        string  `fill:""`
+	DefaultString  string  `defaults:"DefaultValue"`
+	DefaultInt     int     `defaults:"5"`
+	DefaultFloat64 float64 `defaults:"42.6"`
+	DefaultBool    bool    `defaults:"true"`
 }
 
 // RegFiller - register new filler into []fillers
