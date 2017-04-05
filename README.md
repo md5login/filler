@@ -1,4 +1,4 @@
-# filler [![Go Report Card](https://goreportcard.com/badge/github.com/yaronsumel/filler)](https://goreportcard.com/report/github.com/yaronsumel/filler) [![Build Status](https://travis-ci.org/yaronsumel/grapes.svg?branch=master)](https://travis-ci.org/yaronsumel/grapes) [![GoDoc](https://godoc.org/github.com/yaronsumel/filler?status.svg)](https://godoc.org/github.com/yaronsumel/filler)
+# filler [![Go Report Card](https://goreportcard.com/badge/github.com/md5login/filler)](https://goreportcard.com/report/github.com/yaronsumel/filler) [![Build Status](https://travis-ci.org/md5login/filler.svg?branch=master)](https://travis-ci.org/md5login/filler) [![GoDoc](https://godoc.org/github.com/md5login/filler?status.svg)](https://godoc.org/github.com/md5login/filler)
 ###### small util to fill gaps in your structs 
 
 Installation
@@ -49,4 +49,17 @@ type Model struct {
 	filler.Fill(&m)
 ```
 
-> ##### Written and Maintained by [@YaronSumel](https://twitter.com/yaronsumel) #####
+###### Add the 'default' tag in your model
+```go
+type Model struct {
+	UserId   bson.ObjectId 
+	FieldA   string        `defaults:"This is a field"`
+	Age	 int64         `defaults:"18"`
+}
+```
+###### Fill the defaul values
+```go
+	filler.Defaults(&m)
+```
+
+> ##### Forked from [Filler](https://github.com/yaronsumel/filler/) by [YaronSumel](https://twitter.com/yaronsumel) #####
