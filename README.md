@@ -7,7 +7,7 @@ Installation
 $ go get github.com/yaronsumel/filler
 ```
 
-[Working Example](https://github.com/yaronsumel/filler/blob/master/example/example.go)
+[Working Example](https://github.com/md5login/filler/blob/master/example/example.go)
 
 Usage
 ------
