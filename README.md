@@ -4,7 +4,7 @@
 Installation
 ------
 ```bash
-$ go get github.com/yaronsumel/filler
+$ go get github.com/md5login/filler
 ```
 
 [Working Example](https://github.com/md5login/filler/blob/master/example/example.go)
