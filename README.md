@@ -49,7 +49,7 @@ type Model struct {
 	filler.Fill(&m)
 ```
 
-###### Add the 'default' tag in your model
+###### Add the 'defaults' tag in your model
 ```go
 type Model struct {
 	UserId   bson.ObjectId 
