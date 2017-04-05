@@ -24,6 +24,10 @@ type demoStruct struct {
 	Val     string `fill:"demoFiller2"`
 	Ignore1 string `fill:"-"`
 	Ignore2 string `fill:""`
+	DefaultString 	string 	`defaults:"DefaultValue"`
+	DefaultInt 	int 	`defaults:"5"`
+	DefaultFloat64 	float64 `defaults:"42.6"`
+	DefaultBool 	bool	`defaults:"true"`
 }
 
 // RegFiller - register new filler into []fillers
@@ -56,8 +60,9 @@ func TestFill(t *testing.T) {
 	}()
 	// check if got filled
 	Fill(&m)
+	Defaults(&m)
 	// should be filled
-	if m.Name != "hello" || m.Val != "valVal" {
+	if m.Name != "hello" || m.Val != "valVal" || m.DefaultString != "DefaultValue" || m.DefaultInt != 5 || m.DefaultFloat64 != 42.6 || m.DefaultBool != true {
 		t.FailNow()
 	}
 }
